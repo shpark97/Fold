@@ -1,0 +1,10 @@
+postprocessor:
+  name: fold_ash
+  APS_mode: True
+  postprocessor_args:
+    percentile: 90
+    alpha: 0.1
+    norm: true               # score normalization on/off
+  postprocessor_sweep:
+    percentile_list: [65, 70, 75, 80, 85, 90, 95]
+    alpha_list: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]

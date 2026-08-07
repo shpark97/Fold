@@ -1,0 +1,9 @@
+postprocessor:
+  name: autofold_react
+  APS_mode: True
+  postprocessor_args:
+    alpha: 0.4               # fallback alpha (overwritten by calibration)
+    percentile: 90           # ReAct feature clipping percentile
+    loco_max_classes: 20     # max held-out classes for calibration
+  postprocessor_sweep:
+    percentile_list: [85, 90, 95, 99]
